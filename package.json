@@ -15,9 +15,10 @@
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "eslint --fix",
     "prepublishOnly": "npm run lint",
-    "preversion": "npm run lint",
+    "preversion": "npm run lint && npm run changelog",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "changelog": "./node_modules/.bin/conventional-changelog -p angular -k package.json -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "keywords": [
     "autocomplete",
@@ -44,12 +45,13 @@
     "utils/*"
   ],
   "peerDependencies": {
+    "@react-native-community/geolocation": "^2.0.0",
     "react-native": ">= 0.50",
     "react-native-maps": ">= 0.19.0",
-    "react-native-vector-icons": "^4.4.3",
-    "@react-native-community/geolocation": "^2.0.0"
+    "react-native-vector-icons": "^4.4.3"
   },
   "devDependencies": {
+    "conventional-changelog-cli": "^2.0.34",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",

@@ -159,7 +159,7 @@ export default class LocationView extends React.Component {
             components={this.props.components}
           />
         </View>
-        {showMyLocationButton && (
+        {this.props.showMyLocationButton && (
           <TouchableOpacity
             style={[styles.currentLocBtn, { backgroundColor: this.props.markerColor }]}
             onPress={this._getCurrentLocation}
