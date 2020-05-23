@@ -18,7 +18,7 @@
     "preversion": "npm run lint && npm run changelog",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
-    "changelog": "./node_modules/.bin/conventional-changelog -p angular -k package.json -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "keywords": [
     "autocomplete",
