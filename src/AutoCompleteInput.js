@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TextInput, View, StyleSheet, Animated, TouchableOpacity } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import AutoCompleteListView from './AutoCompleteListView';
-import axios from 'axios';
+import axios, { CancelToken } from 'axios';
 import Events from 'react-native-simple-events';
 import debounce from '../utils/debounce';
 
